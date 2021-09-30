@@ -1,6 +1,11 @@
 # Shopping-list app
 
+
+
 Project url:https://shopping-list-35454.web.app
+
+
+![new item](https://user-images.githubusercontent.com/87143175/135526658-3bd9a96b-8d4b-4536-90f5-836e5adefd1e.PNG)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
