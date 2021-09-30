@@ -14,9 +14,9 @@ function App() {
     e.preventDefault()
     const AddTodo = {
       id: new Date().getTime(),
-      todoName: todo.name,
+      name: todo.name,
       description: todo.description,
-      dueDate: todo.quantity,
+      quantity: todo.quantity,
       complete: false
     }
     setList([...todoList].concat(AddTodo))
@@ -26,7 +26,6 @@ function App() {
   function deleteTodo(id) {
     let updatedList = [...todoList].filter((todo) => todo.id !== id)
     setList(updatedList)
-
   }
 
   function completeTodo(id) {
@@ -44,13 +43,13 @@ function App() {
     <div className="todo">
       <h1> Add New Item  </h1>
       <form onSubmit={onsubmitHandler}>
-        <label>Name</label>
 
+        <label>Name</label>
         <input
           type="text"
           value={todo.name}
           Name="name"
-          placeholder="Enter Name "
+          placeholder="Enter Name"
           required
           onChange={(e) => setTodo({ ...todo, name: e.target.value })}
         />
@@ -76,11 +75,9 @@ function App() {
 
         <button> Add to list</button>
       </form>
-<h1>Shopping list</h1>
+      <h1>Shopping list</h1>
       {todoList.map((data) => (
         <div key={data.id} className="list-style">
-
-
           <div className="button-style">
 
             <div className="todo-style">
@@ -97,9 +94,7 @@ function App() {
           </div>
         </div>
       ))}
-
     </div>
   );
 }
-
 export default App;
